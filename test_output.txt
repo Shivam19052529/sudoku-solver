@@ -1,0 +1,62 @@
+============================================
+          SUDOKU SOLVER - TEST SUITE
+============================================
+
+[PASS] TC1  Easy puzzle
+     expected=SOLVED | recursion=true (4209 calls, 0.93 ms) | stack=true (4208 pushes, 3.13 ms) | MRV=true (52 calls, 0.40 ms)
+[PASS] TC2  Easy puzzle matches known answer
+     output=534678912672195348198342567859761423426853791713924856961537284287419635345286179
+[PASS] TC3  Medium puzzle
+     expected=SOLVED | recursion=true (55 calls, 0.01 ms) | stack=true (54 pushes, 0.05 ms) | MRV=true (46 calls, 0.36 ms)
+[PASS] TC4  Hard puzzle (Arto Inkala)
+     expected=SOLVED | recursion=true (49559 calls, 2.27 ms) | stack=true (49558 pushes, 10.78 ms) | MRV=true (10102 calls, 36.51 ms)
+     Input:
++-------+-------+-------+
+| 8 . . | . . . | . . . |
+| . . 3 | 6 . . | . . . |
+| . 7 . | . 9 . | 2 . . |
++-------+-------+-------+
+| . 5 . | . . 7 | . . . |
+| . . . | . 4 5 | 7 . . |
+| . . . | 1 . . | . 3 . |
++-------+-------+-------+
+| . . 1 | . . . | . 6 8 |
+| . . 8 | 5 . . | . 1 . |
+| . 9 . | . . . | 4 . . |
++-------+-------+-------+
+     Output:
++-------+-------+-------+
+| 8 1 2 | 7 5 3 | 6 4 9 |
+| 9 4 3 | 6 8 2 | 1 7 5 |
+| 6 7 5 | 4 9 1 | 2 8 3 |
++-------+-------+-------+
+| 1 5 4 | 2 3 7 | 8 9 6 |
+| 3 6 9 | 8 4 5 | 7 2 1 |
+| 2 8 7 | 1 6 9 | 5 3 4 |
++-------+-------+-------+
+| 5 2 1 | 9 7 4 | 3 6 8 |
+| 4 3 8 | 5 2 6 | 9 1 7 |
+| 7 9 6 | 3 1 8 | 4 5 2 |
++-------+-------+-------+
+[PASS] TC5  Completely empty board
+     expected=SOLVED | recursion=true (392 calls, 0.04 ms) | stack=true (391 pushes, 0.13 ms) | MRV=true (82 calls, 0.35 ms)
+[PASS] TC6  Already solved board
+     placements=0 (expected 0)
+[PASS] TC7  Invalid: duplicate in row
+     expected=NO SOLUTION | recursion=false (0 calls, 0.00 ms) | stack=false (0 pushes, 0.00 ms) | MRV=false (0 calls, 0.00 ms)
+[PASS] TC8  Invalid: duplicate in column
+     expected=NO SOLUTION | recursion=false (0 calls, 0.01 ms) | stack=false (0 pushes, 0.01 ms) | MRV=false (0 calls, 0.02 ms)
+[PASS] TC9  Valid clues but no solution
+     expected=NO SOLUTION | recursion=false (1 calls, 0.01 ms) | stack=false (0 pushes, 0.01 ms) | MRV=false (1 calls, 0.01 ms)
+[PASS] TC10 Uniqueness check
+     easy puzzle solutions=1 (expected 1), 2-clue puzzle solutions>=2 (expected 2)
+[PASS] TC11 Malformed input rejected
+     4/4 rejected (short string, bad character, wrong size, value 10)
+[PASS] TC12 Given clues are never changed
+     all clues preserved=true
+[PASS] TC13 Generated puzzles are valid and unique
+     Easy: 40 clues, unique=true, 2.9 ms; Medium: 32 clues, unique=true, 3.3 ms; Hard: 26 clues, unique=true, 11.2 ms; 
+
+============================================
+RESULT: 13 passed, 0 failed, 13 total
+============================================
